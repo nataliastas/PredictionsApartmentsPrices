@@ -18,7 +18,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder
-st.title('Przewidywanie ceny mieszkania')
+st.title('Przewidywanie ceny mieszkania124')
 
 #@st.cache
 def load_data(filename):
