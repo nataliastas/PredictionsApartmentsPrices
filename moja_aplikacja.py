@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-from matplotlib import pyplot as plt
 import altair as alt
 
 st.title('Ceny mieszkań w mieście Poznań')
@@ -42,7 +40,8 @@ st.write(data_filtered)
 
 st.header('Wizualizacja danych')
 st.text('Wybierz między jaką cechą, a ceną chcesz wyświetlić wykres zależności')
-option = st.selectbox('Wybierz cechę',('powierzchnia','liczba pokoi','piętro','lokalizacja','wiek mieszkania','rynek'))
+option = st.selectbox('Wybierz cechę',('powierzchnia','liczba pokoi','piętro','lokalizacja',
+                                       'wiek mieszkania','rynek'))
 X = data[['powierzchnia','liczba pokoi','piętro','lokalizacja','wiek mieszkania','rynek']].values
 y = data[['cena']].values
 chart = alt.Chart(data).mark_circle().encode(x=option,y='cena')
